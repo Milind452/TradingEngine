@@ -6,6 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>TradingEngineServer.Core</RootNamespace>
+    <AssemblyName>TradingEngineServer.Core</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
