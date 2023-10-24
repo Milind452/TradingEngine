@@ -8,4 +8,10 @@
     <RootNamespace>TradingEngineServer.Core</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutPutDirectory>Always</CopyToOutPutDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
