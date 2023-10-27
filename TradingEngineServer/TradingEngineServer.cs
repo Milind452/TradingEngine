@@ -23,6 +23,7 @@ namespace TradingEngineServer.Core
             {
                 throw new NotImplementedException();
             }
+            return Task.CompletedTask;
         }
     }
 }
