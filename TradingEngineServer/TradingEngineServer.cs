@@ -14,6 +14,9 @@ namespace TradingEngineServer.Core
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _tradingEngineServerConfiguration = config.Value ?? throw new ArgumentNullException(nameof(config));
         }
+
+        public Task Run(CancellationToken cancellationToken) => ExecuteAsync(cancellationToken);
+
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
