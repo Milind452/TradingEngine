@@ -9,10 +9,17 @@ namespace TradingEngineServer.Core
         public static IHost BuildTradingEngineServer() =>
             Host.CreateDefaultBuilder().ConfigureServices((context, services) =>
             {
+                // Configuration
                 services.AddOptions();
                 services.Configure<TradingEngineServerConfiguration>(
                     context.Configuration.GetSection(nameof(TradingEngineServerConfiguration))
                 );
+
+                // Register Singleton Objects
+                services.AddSingleton<ITradingEngineServer, TradingEngineServer>();
+
+                // Register Hosted Services
+                services.AddHostedService<TradingEngineServer>();
             }).Build();
     }
 }
